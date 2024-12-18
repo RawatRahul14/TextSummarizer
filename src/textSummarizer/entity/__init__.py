@@ -34,3 +34,11 @@ class ModelTrainerConfig:
     eval_steps: int
     save_steps: str
     gradient_accumulation_steps: int
+
+@dataclass(frozen = True)
+class DataEvaluationConfig:
+    root_dir: Path
+    data_path: Path
+    model_path: Path
+    tokenizer_path: Path
+    metric_file_name: Path
